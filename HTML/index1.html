@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hung</title>
+</head>
+<body>
+    <ul id="ul1">
+        <li>forEach() không trả về, chỉ thực hiện</li>
+        <li>map() trả về mảng mới</li>
+        <li>filter() trả về mảng mới thỏa mãn 1 condition (true/false)</li>
+        <li>reduce() trả về 1 giá trị, không dùng mảng gốc để tính toán</li>
+        <li>every() trả về 1 boolean khi tất cả items thỏa mãn 1 condition (true/false)</li>
+        <li>some()</li>
+        <li>indexOf() trả về vị trí của phần tử đó (sử dụng dấu ===) và trả về thằng đầu tiên</li>
+        <li>find() trả về index của phần từ đầu tiên pass test</li>
+        <li>includes() trả về 1 boolean (true/false) nếu mảng có chứa giá trị trong includes</li>
+    </ul>
+    <script>
+        let ls = [1, 2, 3, 4];
+        let ls1 = [1, 2, 3, 4];
+
+        ls.forEach(funct1);
+        
+        console.log("-----------------------");
+        ls.myHam = function(subFunction){
+            for(let i=0; i<this.length; ++i){
+
+                subFunction(ls[i], i);
+                
+            }
+        }
+
+        function funct1(value, index){
+            console.log(`item: ${value} index: ${index}`);
+        }
+
+        ls.myHam(funct1);
+
+        console.log(ls.reduce(funct2,10));
+        function funct2(total, value){
+            return total+value;
+        }
+
+        console.log(ls.indexOf(1));
+
+        a = new Date(2022, 12, 4);
+        console.log(a);
+
+        "use strict";
+        x = 1;
+
+        let var1 = 100;
+        function ham(){
+            console.log(var1);
+        }
+        ham();
+
+        let ul1 = document.getElementById("ul1");
+        console.log(ul1.innerHTML);
+
+        ob = {
+            name: "Hung",
+            age: 50,
+            dob: Date()
+        };
+        jsonob = JSON.stringify(ob);
+        console.log(JSON.parse(jsonob));
+    </script>
+</body>
+</html>
