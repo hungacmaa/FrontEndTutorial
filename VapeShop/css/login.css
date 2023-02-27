@@ -1,0 +1,191 @@
+@import url(./variables.css);
+.header {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.header ul {
+    list-style: none;
+    font-size: 0px;
+}
+
+.header li {
+    display: inline-block;
+}
+
+.header button {
+    display: block;
+    background-color: var(--primary-color);
+    padding: 16px;
+    margin: 0;
+    transition: all 0.1s;
+    color: white;
+    margin-right: 8px;
+}
+
+.header button:hover {
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+.sub-view {
+    display: none;
+    background-color: rgba(0,0,0,0.3);
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    box-sizing: border-box;
+    padding: 52px 0;
+}
+
+.form-block {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    width: 500px;
+    padding-top: 16px;
+    border: 2px solid black;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, 0);
+    background-color: white;
+    box-sizing: border-box;
+}
+
+.exit-form {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    font-weight: 600;
+    font-size: 32px;
+}
+
+.exit-form:hover {
+    color: var(--notice);
+    cursor: pointer;
+}
+
+.login-form {
+    display: none;
+}
+
+.form-block button:hover {
+    cursor: pointer;
+}
+
+.login-form .avatar {
+
+}
+
+.avatar img {
+    display: block;
+    width: 200px;
+    height: auto;
+    border-radius: 50%;
+}
+
+.form-block form {
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 0 16px;
+    justify-content: flex-start;
+}
+
+form>label {
+    font-size: larger;
+    font-weight: 600;
+    
+}
+
+form>input {
+    padding: 16px;
+    box-sizing: border-box;
+    margin-top: 8px;
+    font-size: medium;
+    border: 1px solid #ccc;
+}
+
+
+form input:focus {
+    border-radius: 2px;
+    border: 1px solid black;
+}
+
+.btn-submit {
+    padding: 16px;
+    box-sizing: border-box;
+    margin-top: 8px;
+    font-size: medium;
+    border: 1px solid #ccc;
+    background-color: var(--primary-color);
+    color: white;
+
+}
+
+.btn-submit:hover {
+    opacity: 0.7;
+    cursor: pointer;
+}
+.btn-submit i {
+    margin-right: 8px;
+}
+
+.btn-facebook-login {
+    background-color: #4267b2;
+}
+
+.btn-google-login {
+    background-color: #EA4335;
+}
+
+.remember-box {
+    font-size: larger;
+    display: flex;
+    align-items: center;
+    margin-top: 8px;
+}
+
+
+.remember-box>input {
+    transform: scale(1.2);
+    vertical-align: middle;
+    margin-left: 2px;
+}
+
+.remember-box>label {
+    margin-left: 8px;
+    font-weight: 400;
+}
+
+.login-bottom {
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 16px;
+    background-color: #f1f1f1;
+}
+
+.login-bottom button {
+    padding: 8px 16px;
+    background-color: var(--notice);
+    color: white;
+    font-size: medium;
+}
+
+.login-bottom button:hover {
+    opacity: 0.8;
+}
+
+.register-form {
+    display: none;
+}

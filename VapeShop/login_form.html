@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/login.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Average+Sans&family=Roboto:wght@100;300;400;500;700;900&display=swap"
+        rel="stylesheet">
+    <link rel="icon" type="image/x-icon"
+        href="https://i0.wp.com/www.ideaimaji.com/blog/wp-content/uploads/2016/08/cropped-favicon.png?ssl=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+        integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <title>Đăng nhập</title>
+</head>
+
+<body>
+
+    <div class="header">
+        <ul>
+            <li>
+                <button class="login" onclick="showLoginForm()">Login</button>
+            </li>
+            <li>
+                <button class="register" onclick="showRegisterForm()">Register</button>
+            </li>
+        </ul>
+    </div>
+    <div class="sub-view">
+        <div class="form-block login-form">
+            <span class="exit-form" onclick="hideForm()">X</span>
+            <div class="avatar">
+                <img src="https://khoinguonsangtao.vn/wp-content/uploads/2022/06/avatar-facebook-nu-tao-ky-hieu-tay-1.png"
+                    alt="avatar">
+            </div>
+            <form action="/">
+                <label for="username">Username</label>
+                <input type="text" name="username" id="username" placeholder="Username" required>
+
+                <br>
+
+                <label for="password">Password</label>
+                <input type="password" name="password" id="password" placeholder="Password" required>
+
+                <br>
+
+                <input class="btn-submit" type="submit" value="Login">
+                <button class="btn-submit">Login</button>
+                <button class="btn-submit btn-facebook-login"><i class="fa-brands fa-facebook-f"></i>Facebook
+                    Login</button>
+                <button class="btn-submit btn-google-login"><i class="fa-brands fa-google"></i>Google Login</button>
+                <div class="remember-box">
+                    <input type="checkbox" id="remember"><label for="remember">Remember me</label>
+                </div>
+            </form>
+            <br>
+            <div class="login-bottom">
+                <button onclick="hideForm()">Cancel</button>
+                <a href="">Forgot password?</a>
+            </div>
+
+        </div>
+
+        <div class="form-block register-form">
+            <span class="exit-form" onclick="hideForm()">X</span>
+            <div class="avatar">
+                <img src="https://anhdephd.vn/wp-content/uploads/2022/07/avatar-fb-cho-con-gai-600x600.png"
+                    alt="avatar">
+            </div>
+            <form action="/">
+                <label for="username">Username</label>
+                <input type="text" name="username" id="username" placeholder="Username" required>
+
+                <br>
+                <label for="password">Password</label>
+                <input type="password" name="password" id="password" placeholder="Password" required>
+
+                <br>
+                <label for="repeat">Repeat Password</label>
+                <input type="password" name="repeat" id="repeat" placeholder="Repeat Password" required>
+
+                <br>
+
+                <input class="btn-submit" type="submit" value="Register">
+                <button class="btn-submit">Register</button>
+
+            </form>
+            <br>
+            <div class="login-bottom">
+                <button onclick="hideForm()">Cancel</button>
+                
+            </div>
+
+        </div>
+    </div>
+
+
+
+    <div class="form register-form"></div>
+    <script>
+        let subView = $(".sub-view")[0];
+        let loginForm = $(".login-form")[0];
+        let registerForm = $(".register-form")[0];
+        const showLoginForm = () => {
+            subView.style.display = "block";
+            loginForm.style.display = "flex";
+        }
+
+        const hideForm = () => {
+            subView.style.display = "none";
+            loginForm.style.display = "none";
+            registerForm.style.display = "none";
+        }
+
+        const showRegisterForm = () => {
+            subView.style.display = "block";
+            registerForm.style.display = "flex";
+        }
+
+
+        window.onclick = function (event) {
+            if (event.target == subView) {
+                hideForm();
+            }
+        }
+    </script>
+</body>
+
+</html>

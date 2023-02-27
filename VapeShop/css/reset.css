@@ -5,3 +5,8 @@
     /* font-family: 'Average Sans', sans-serif; */
     font-family: 'Roboto', sans-serif;
 }
+
+.container {
+    max-width: 1000px;
+    margin: auto;
+}
